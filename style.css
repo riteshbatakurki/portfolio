@@ -572,3 +572,36 @@ section{
 #topBtn:hover{
     transform:scale(1.1);
 }
+/* DESKTOP SECTION FIX */
+
+@media (min-width: 769px){
+
+    .about{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    .skills{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    .projects{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+    .contact{
+        min-height:100vh;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+    }
+
+}
