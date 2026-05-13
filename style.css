@@ -353,11 +353,11 @@ section{
     z-index:1000;
 }
 section{
-    scroll-margin-top:220px;
+    scroll-margin-top:140px;
 }
 
 html{
-    scroll-padding-top:160px;
+    scroll-padding-top:120px;
 }
  ul{
     display:flex;
