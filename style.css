@@ -1,14 +1,10 @@
-body{
-    scroll-behavior:smooth;
-}
 html{
     scroll-behavior:smooth;
 }
-
-section{
-    padding-top:140px;
-    margin-top:-140px;
+body{
+    scroll-behavior:smooth;
 }
+
 
 *{
     margin:0;
@@ -336,64 +332,82 @@ footer p{
         transform:translateY(0);
     }
 }
-@media (max-width: 768px){
+@media (max-width:768px){
 
-  nav{
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
+    html{
+        scroll-padding-top:120px;
+    }
 
-    padding:10px 10px;
-    gap:8px;
+    section{
+        scroll-margin-top:120px;
+    }
 
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    z-index:1000;
-}
+    nav{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
 
-html{
-    scroll-padding-top:220px;
-}
- ul{
-    display:flex;
-    flex-wrap:nowrap;
-    justify-content:center;
-    align-items:center;
+        padding:12px 10px;
+        gap:10px;
 
-    gap:14px;
+        position:fixed;
+        top:0;
+        left:0;
+        width:100%;
+        z-index:1000;
+    }
 
-    width:100%;
-}
-li{
-    list-style:none;
-}
+    ul{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:14px;
 
-a{
-    font-size:14px;
-    white-space:nowrap;
-}
+        width:100%;
+        flex-wrap:nowrap;
+    }
+
+    li{
+        list-style:none;
+    }
+
+    a{
+        font-size:14px;
+        white-space:nowrap;
+    }
+
     .logo{
         font-size:18px;
         text-align:center;
     }
 
+    #theme-btn{
+        position:absolute;
+        top:12px;
+        right:12px;
+
+        margin:0;
+        padding:7px 11px;
+        font-size:16px;
+    }
+
     .hero{
-        padding-top:110px;
-        min-height:auto;
+        padding-top:180px;
+        min-height:100vh;
+    }
+
+    .profile-pic{
+        width:130px;
+        height:130px;
+        margin-top:10px;
+        margin-bottom:20px;
     }
 
     h1{
-        font-size:44px;
+        font-size:48px;
         line-height:1.2;
         text-align:center;
-    }
-
-    h2{
-        font-size:42px;
-        line-height:1.2;
     }
 
     .hero p{
@@ -402,13 +416,11 @@ a{
         padding:0 15px;
     }
 
-   .profile-pic{
-    display:block;
-    width:130px;
-    height:130px;
-    margin-top:20px;
-    margin-bottom:20px;
-}
+    h2{
+        font-size:42px;
+        line-height:1.2;
+        margin-bottom:25px;
+    }
 
     .about,
     .skills,
@@ -424,38 +436,39 @@ a{
     }
 
     .skill-box{
-    display:grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap:15px;
-}
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
 
-   .card{
-    width:100%;
-    padding:18px 10px;
-    font-size:14px;
-}
+    .card{
+        width:100%;
+        padding:18px 10px;
+        font-size:14px;
+    }
 
     .project-container{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:15px;
-}
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+    }
 
     .project-card{
-    width:100%;
-    padding:18px;
-}
-   .project-card h3{
-    font-size:20px;
-}
+        width:100%;
+        padding:20px;
+    }
 
-   .project-card p{
-    font-size:14px;
-    line-height:1.5;
-}
+    .project-card h3{
+        font-size:22px;
+    }
+
+    .project-card p{
+        font-size:15px;
+        line-height:1.6;
+    }
 
     .contact p{
-        font-size:20px;
+        font-size:18px;
         line-height:1.8;
         word-break:break-word;
     }
@@ -465,7 +478,7 @@ a{
     }
 
     footer p{
-        font-size:18px;
+        font-size:16px;
     }
 
     #topBtn{
@@ -475,20 +488,6 @@ a{
         bottom:30px;
         right:18px;
     }
-#theme-btn{
-    position:absolute;
-    top:12px;
-    right:12px;
-
-    margin:0;
-
-    padding:7px 11px;
-    font-size:16px;
-}
-section{
-    scroll-margin-top:220px;
-
-}
 }
 /* THEME BUTTON */
 
