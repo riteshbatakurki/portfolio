@@ -1,10 +1,13 @@
-html{
-    scroll-behavior:smooth;
-    scroll-padding-top:180px;
-}
-
 body{
     scroll-behavior:smooth;
+}
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:260px;
+}
+
+section{
+    scroll-margin-top:260px;
 }
 
 *{
@@ -271,9 +274,6 @@ footer p{
     box-shadow:0 0 20px #00ff99;
     background-position:right center;
 }
-section{
-    scroll-margin-top:180px;
-}
 .hero,
 .about,
 .skills,
@@ -352,9 +352,6 @@ section{
     left:0;
     width:100%;
     z-index:1000;
-}
-section{
-    scroll-margin-top:220px;
 }
 
 html{
