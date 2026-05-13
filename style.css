@@ -337,20 +337,20 @@ section{
 }
 @media (max-width: 768px){
 
-    nav{
-        flex-direction:column;
-        padding:15px 20px;
-        gap:15px;
-    }
-
-    ul{
-        flex-wrap:wrap;
-        justify-content:center;
-        gap:18px;
-    }
+   nav{
+    padding:12px 10px;
+    gap:10px;
+}
+ ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+}
 
     a{
-        font-size:18px;
+        font-size:15px;
     }
 
     .logo{
@@ -359,7 +359,7 @@ section{
     }
 
     .hero{
-        padding-top:90px;
+        padding-top:140px;
         min-height:auto;
     }
 
@@ -380,10 +380,13 @@ section{
         padding:0 15px;
     }
 
-    .profile-pic{
-        width:140px;
-        height:140px;
-    }
+   .profile-pic{
+    display:block;
+    width:130px;
+    height:130px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
 
     .about,
     .skills,
@@ -399,35 +402,35 @@ section{
     }
 
     .skill-box{
-        flex-direction:column;
-        align-items:center;
-        gap:20px;
-    }
+    display:grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap:15px;
+}
 
-    .card{
-        width:90%;
-        padding:25px;
-        font-size:20px;
-    }
+   .card{
+    width:100%;
+    padding:18px 10px;
+    font-size:14px;
+}
 
     .project-container{
-        flex-direction:column;
-        align-items:center;
-    }
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:15px;
+}
 
     .project-card{
-        width:90%;
-        padding:25px;
-    }
+    width:100%;
+    padding:18px;
+}
+   .project-card h3{
+    font-size:20px;
+}
 
-    .project-card h3{
-        font-size:34px;
-    }
-
-    .project-card p{
-        font-size:20px;
-        line-height:1.7;
-    }
+   .project-card p{
+    font-size:14px;
+    line-height:1.5;
+}
 
     .contact p{
         font-size:20px;
@@ -455,6 +458,15 @@ section{
         bottom:30px;
         right:18px;
     }
+#theme-btn{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    padding:8px 12px;
+    font-size:16px;
+}
+
 }
 /* THEME BUTTON */
 
