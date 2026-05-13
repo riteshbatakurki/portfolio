@@ -1,5 +1,6 @@
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:180px;
 }
 
 body{
@@ -353,11 +354,11 @@ section{
     z-index:1000;
 }
 section{
-    scroll-margin-top:140px;
+    scroll-margin-top:220px;
 }
 
 html{
-    scroll-padding-top:120px;
+    scroll-padding-top:220px;
 }
  ul{
     display:flex;
