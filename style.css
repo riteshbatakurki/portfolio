@@ -1,10 +1,7 @@
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:120px;
 }
-body{
-    scroll-behavior:smooth;
-}
-
 
 *{
     margin:0;
@@ -30,6 +27,7 @@ nav{
     background:#111;
     position:fixed;
     top:0;
+    left:0;
     z-index:1000;
     animation:navFade 1s ease;
 }
@@ -37,6 +35,7 @@ nav{
 .logo{
     color:#00ff99;
     font-size:22px;
+    font-weight:bold;
 }
 
 ul{
@@ -52,6 +51,7 @@ a{
     font-size:18px;
     position:relative;
 }
+
 a::after{
     content:"";
     position:absolute;
@@ -70,16 +70,17 @@ a:hover::after{
 a:hover{
     color:white;
 }
+
 /* HERO SECTION */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     align-items:center;
     text-align:center;
-    padding-top:160px;
+    padding:160px 20px 80px;
 }
 
 .profile-pic{
@@ -102,40 +103,23 @@ h1{
     font-size:60px;
     margin-bottom:20px;
     letter-spacing:3px;
-    transition:0.3s;
-    cursor:default;
-}
-
-h1:hover{
-    transform:scale(1.02);
 }
 
 .hero p{
     color:#bdbdbd;
     font-size:24px;
+    line-height:1.8;
 }
 
-button{
-    margin-top:25px;
-    padding:14px 28px;
-    border:none;
-    border-radius:10px;
-    background:#00ff99;
-    font-size:16px;
-    cursor:pointer;
-    transition:0.3s;
-}
+/* SECTIONS */
 
-button:hover{
-    background:white;
-    transform:scale(1.05);
-}
-
-/* ABOUT SECTION */
-
-.about{
+.about,
+.skills,
+.projects,
+.contact{
     padding:120px 20px;
     text-align:center;
+    border-top:1px solid rgba(255,255,255,0.08);
 }
 
 h2{
@@ -152,11 +136,6 @@ h2{
 }
 
 /* SKILLS */
-
-.skills{
-    padding:120px 20px;
-    text-align:center;
-}
 
 .skill-box{
     display:flex;
@@ -184,11 +163,6 @@ h2{
 
 /* PROJECTS */
 
-.projects{
-    padding:60px 20px;
-    text-align:center;
-}
-
 .project-container{
     display:flex;
     justify-content:center;
@@ -205,13 +179,13 @@ h2{
     border:1px solid rgba(255,255,255,0.1);
     backdrop-filter:blur(10px);
     transition:0.3s;
-    cursor:pointer;
 }
 
 .project-card:hover{
     transform:translateY(-15px) scale(1.03);
     box-shadow:0 0 25px #00ff99;
 }
+
 .project-card h3{
     color:#00ff99;
     margin-bottom:15px;
@@ -225,16 +199,11 @@ h2{
 
 /* CONTACT */
 
-.contact{
-    padding:120px 20px;
-    text-align:center;
-}
-
 .contact p{
     font-size:22px;
     margin-top:20px;
     color:#ccc;
-    transition:0.3s;
+    line-height:1.8;
 }
 
 .contact p:hover{
@@ -247,248 +216,12 @@ footer{
     background:#111;
     padding:30px;
     text-align:center;
-    margin-top:50px;
 }
 
 footer p{
     color:#00ff99;
 }
-.linkedin-btn{
-    margin-top:25px;
-    padding:14px 30px;
-    background:linear-gradient(45deg,#00ff99,#00ccff);
-    color:black;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
-    transition:0.4s;
-    display:inline-block;
-    background-size:200% 200%;
-}
-.linkedin-btn:hover{
-    transform:scale(1.08);
-    box-shadow:0 0 20px #00ff99;
-    background-position:right center;
-}
-.hero,
-.about,
-.skills,
-.projects,
-.contact{
-    animation:fadeUp 1s ease;
-}
 
-@keyframes fadeUp{
-
-    from{
-        opacity:0;
-        transform:translateY(40px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-.about,
-.skills,
-.projects,
-.contact{
-    border-top:1px solid rgba(255,255,255,0.08);
-}
-/* CUSTOM SCROLLBAR */
-
-::-webkit-scrollbar{
-    width:10px;
-}
-
-::-webkit-scrollbar-track{
-    background:black;
-}
-
-::-webkit-scrollbar-thumb{
-    background:#00ff99;
-    border-radius:10px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background:#00cc77;
-}
-/* TEXT SELECTION */
-
-::selection{
-    background:#00ff99;
-    color:black;
-}
-@keyframes navFade{
-
-    from{
-        opacity:0;
-        transform:translateY(-30px);
-    }
-
-    to{
-        opacity:1;
-        transform:translateY(0);
-    }
-}
-@media (max-width:768px){
-
-    html{
-        scroll-padding-top:120px;
-    }
-
-    section{
-        scroll-margin-top:120px;
-    }
-
-    nav{
-        display:flex;
-        flex-direction:column;
-        justify-content:center;
-        align-items:center;
-
-        padding:12px 10px;
-        gap:10px;
-
-        position:fixed;
-        top:0;
-        left:0;
-        width:100%;
-        z-index:1000;
-    }
-
-    ul{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        gap:14px;
-
-        width:100%;
-        flex-wrap:nowrap;
-    }
-
-    li{
-        list-style:none;
-    }
-
-    a{
-        font-size:14px;
-        white-space:nowrap;
-    }
-
-    .logo{
-        font-size:18px;
-        text-align:center;
-    }
-
-    #theme-btn{
-        position:absolute;
-        top:12px;
-        right:12px;
-
-        margin:0;
-        padding:7px 11px;
-        font-size:16px;
-    }
-
-    .hero{
-        padding-top:180px;
-        min-height:100vh;
-    }
-
-    .profile-pic{
-        width:130px;
-        height:130px;
-        margin-top:10px;
-        margin-bottom:20px;
-    }
-
-    h1{
-        font-size:48px;
-        line-height:1.2;
-        text-align:center;
-    }
-
-    .hero p{
-        font-size:20px;
-        line-height:1.7;
-        padding:0 15px;
-    }
-
-    h2{
-        font-size:42px;
-        line-height:1.2;
-        margin-bottom:25px;
-    }
-
-    .about,
-    .skills,
-    .projects,
-    .contact{
-        padding:90px 20px;
-    }
-
-    .about p{
-        font-size:18px;
-        line-height:1.8;
-        padding:0 10px;
-    }
-
-    .skill-box{
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        gap:15px;
-    }
-
-    .card{
-        width:100%;
-        padding:18px 10px;
-        font-size:14px;
-    }
-
-    .project-container{
-        display:grid;
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .project-card{
-        width:100%;
-        padding:20px;
-    }
-
-    .project-card h3{
-        font-size:22px;
-    }
-
-    .project-card p{
-        font-size:15px;
-        line-height:1.6;
-    }
-
-    .contact p{
-        font-size:18px;
-        line-height:1.8;
-        word-break:break-word;
-    }
-
-    footer{
-        padding:20px;
-    }
-
-    footer p{
-        font-size:16px;
-    }
-
-    #topBtn{
-        width:58px;
-        height:58px;
-        font-size:34px;
-        bottom:30px;
-        right:18px;
-    }
-}
 /* THEME BUTTON */
 
 #theme-btn{
@@ -498,6 +231,39 @@ footer p{
     background:#00ff99;
     cursor:pointer;
     font-size:18px;
+}
+
+/* BACK TO TOP BUTTON */
+
+#topBtn{
+    position:fixed;
+    bottom:100px;
+    right:20px;
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:#00ff99;
+    color:black;
+
+    font-size:30px;
+    font-weight:bold;
+
+    cursor:pointer;
+    z-index:1000;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    transition:0.3s;
+}
+
+#topBtn:hover{
+    transform:scale(1.1);
 }
 
 /* LIGHT THEME */
@@ -536,41 +302,196 @@ footer p{
 .light-theme .contact p{
     color:#333;
 }
-/* BACK TO TOP BUTTON */
-#topBtn{
-    position:fixed;
-    bottom:100px;
-    right:20px;
 
-    width:52px;
-    height:52px;
+/* ANIMATIONS */
 
-    margin:0;
-    padding:0;
-
-    border:none;
-    outline:none;
-
-    border-radius:50%;
-
-    background:#00ff99;
-    color:black;
-
-    font-size:30px;
-    font-weight:bold;
-    font-family:Arial, sans-serif;
-
-    cursor:pointer;
-    z-index:1000;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    line-height:1;
-
-    transition:0.3s;
+.hero,
+.about,
+.skills,
+.projects,
+.contact{
+    animation:fadeUp 1s ease;
 }
-#topBtn:hover{
-    transform:scale(1.1);
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes navFade{
+    from{
+        opacity:0;
+        transform:translateY(-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:black;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#00ff99;
+    border-radius:10px;
+}
+
+/* MOBILE */
+
+@media (max-width:768px){
+
+    html{
+        scroll-padding-top:140px;
+    }
+
+    section{
+        scroll-margin-top:140px;
+    }
+
+    nav{
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+
+        padding:12px 10px;
+        gap:10px;
+    }
+
+    ul{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        gap:14px;
+
+        width:100%;
+        flex-wrap:nowrap;
+    }
+
+    a{
+        font-size:14px;
+        white-space:nowrap;
+    }
+
+    .logo{
+        font-size:18px;
+        text-align:center;
+    }
+
+    #theme-btn{
+        position:absolute;
+        top:12px;
+        right:12px;
+
+        margin:0;
+        padding:7px 11px;
+        font-size:16px;
+    }
+
+    .hero{
+        padding-top:200px;
+    }
+
+    .profile-pic{
+        width:130px;
+        height:130px;
+        margin-bottom:20px;
+    }
+
+    h1{
+        font-size:48px;
+        line-height:1.2;
+    }
+
+    .hero p{
+        font-size:20px;
+        line-height:1.7;
+        padding:0 10px;
+    }
+
+    h2{
+        font-size:42px;
+        line-height:1.2;
+    }
+
+    .about,
+    .skills,
+    .projects,
+    .contact{
+        padding:100px 20px;
+    }
+
+    .about p{
+        font-size:18px;
+        line-height:1.8;
+    }
+
+    .skill-box{
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        gap:15px;
+    }
+
+    .card{
+        width:100%;
+        padding:18px 10px;
+        font-size:14px;
+    }
+
+    .project-container{
+        display:grid;
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .project-card{
+        width:100%;
+        padding:20px;
+    }
+
+    .project-card h3{
+        font-size:22px;
+    }
+
+    .project-card p{
+        font-size:15px;
+        line-height:1.6;
+    }
+
+    .contact p{
+        font-size:18px;
+        word-break:break-word;
+    }
+
+    footer{
+        padding:20px;
+    }
+
+    footer p{
+        font-size:16px;
+    }
+
+    #topBtn{
+        width:58px;
+        height:58px;
+        font-size:34px;
+        bottom:30px;
+        right:18px;
+    }
 }
