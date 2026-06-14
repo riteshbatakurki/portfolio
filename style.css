@@ -381,15 +381,40 @@ color:#b8c1d1;
 
 /* CONTACT */
 
-.contact{
-text-align:center;
-}
-
 .socials{
 display:flex;
 justify-content:center;
+align-items:center;
 gap:25px;
-margin-bottom:40px;
+margin-top:25px;
+margin-bottom:25px;
+flex-wrap:nowrap;
+}
+
+.socials a{
+width:70px;
+height:70px;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+border-radius:50%;
+
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
+
+color:white;
+font-size:28px;
+text-decoration:none;
+
+transition:.4s;
+}
+
+.socials a:hover{
+background:#00d4ff;
+color:black;
+transform:translateY(-8px);
 }
 
 .socials a{
